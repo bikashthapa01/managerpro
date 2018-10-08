@@ -1,0 +1,105 @@
+
+
+{%extends 'accounts/base.html'%}
+
+    {%block home_info%}
+          <div class="home_info">
+            <div class="home_details">
+                <h3>Create & Manage </h3>
+                <h2>ManagerPro</h2>
+                <h3>A Simple Project Management System</h3>
+                <div class="btns">
+                    <a href="#">Create New Account</a>
+                </div>
+            </div>  
+       </div>
+    {%endblock%}
+
+    {%block content%}
+      <div class="content">
+       <section class="home_content" id="features">
+           <h1 class="h_title">Features </h1>
+           <div class="box_content">
+               <div class="box one">                   
+                  <div class="features_content">
+                      <div class="features_header">
+                         <h3><i class="fas fa-users"></i> Easy To Manage Project</h3>
+                     </div>
+                     <p class="features_p">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                         tempor incididunt ut labore et dolore magna aliqua.
+                     </p>
+                  </div>
+                   <div class="features_content">
+                      <div class="features_header">
+                         <h3><i class="fas fa-stopwatch"></i> 24 Hours Access</h3>
+                     </div>
+                     <p class="features_p">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                         tempor incididunt ut labore et dolore magna aliqua.
+                     </p>
+                  </div>
+               </div>
+
+
+               <div class="box two">
+                    <div class="features_content">
+                      <div class="features_header">
+                         <h3><i class="fas fa-comments"></i> Easy To Communicate</h3>
+                      </div>
+                      <p class="features_p">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                         tempor incididunt ut labore et dolore magna aliqua.
+                     </p>
+                    </div>
+                     <div class="features_content">
+                      <div class="features_header">
+                         <h3><i class="fas fa-clock"></i> Save Time</h3>
+                      </div>
+                      <p class="features_p">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                         tempor incididunt ut labore et dolore magna aliqua.
+                     </p>
+                    </div>
+               </div>
+           </div>
+       </section>
+     </div>
+     </div>
+      <div class="proj">
+         {%load static%}
+          <div class="proj_content">
+            <h1 class="h_title">Recent Projects </h1>
+           <div class="recent_projects">
+             <div class="proj_box_content">
+                <div class="pro_box first">
+                  <img src="{% static "accounts/images/cute.jpg" %}">
+                  <div class="pro_title">
+                    <h5>First Projects</h5>
+                  </div>
+                </div>
+
+                <div class="pro_box second">
+                   <img src="{% static "accounts/images/angel.jpg" %}">
+                  <div class="pro_title">
+                    <h5>Second Projects</h5>
+                  </div>
+                </div>
+                <div class="pro_box third">
+                   <img src="{% static "accounts/images/bg.png" %}">
+                  <div class="pro_title">
+                    <h5>third Projects</h5>images/
+                  </div>
+                </div>
+                <div class="pro_box fourth">
+                   <img src="{% static "accounts/images/home-bg.jpg" %}">
+                  <div class="pro_title">
+                    <h5>Fourth Projects</h5>
+                  </div>
+                </div>
+             </div>
+           </div>
+
+          </div>
+       </div>
+    {%endblock%}

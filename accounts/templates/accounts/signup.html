@@ -1,0 +1,37 @@
+{%extends 'accounts/base.html'%}
+  
+{% block content%}
+  
+  <div class="content set-height">
+       <div class="signup">
+          <div class="signup-form">
+               <form method="get">
+                <h1 class="form-title">Create New Account</h1>
+                    <p>
+                       <input type="text" name="fName" placeholder="First Name">
+                       <input type="text" name="lName" placeholder="Last Name">
+                   </p>
+
+                    <p>  
+                       <input type="text" name="usn" placeholder="USN">
+                       <input type="text" name="institute" placeholder="Institute">   
+                    </p>
+                    <p>                      
+                       <input type="text" name="department" placeholder="Department">
+                       <input type="text" name="section" placeholder="Section">
+                    </p>
+                    <p>
+                        <input type="text" name="email" placeholder="Email">
+                         <input type="text" name="phone" placeholder="Phone no.">
+
+                    </p>
+                      <p> <button class="signup-button btn">Create Account</button> or <a href="{% url 'login' %}">Login</a></p>
+
+                  </form>
+          </div>
+       </div>
+
+
+     </div>
+  
+{%endblock%}

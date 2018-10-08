@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    /*background: url('bg.png') no-repeat ,#e4e4e4;*/
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+img {
+    width: 100%;
+}
+.clearFix {
+    content: "";
+    clear: both;
+    display: block;
+}
+.black{
+    color: #111;
+}
+.header {
+    /*background: #2196F3;*/
+    /*background-image: linear-gradient(to bottom,#000000bd,#000000ad),url(images/home-bg.jpg);*/
+    padding: 0.5rem;
+    overflow: hidden;
+    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);*/
+
+}
+
+.login-header {
+    background: transparent;
+}
+.header-content {
+     margin: auto;
+    max-width: 1024px;
+}
+
+.site-branding {
+   float: left;
+   width: 30%;
+}
+.site-branding a {
+    color:#fff;
+    text-decoration: none;
+}
+
+.site-branding h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 25px;
+}
+
+.site-branding small {
+    color: #fff;
+}
+.menu-nav {
+    float: right;
+    width: 70%;
+}
+.menu-nav ul {
+    list-style: none;
+    float: right;
+}
+.menu-nav ul li {
+    display: inline-block;
+    /*margin-right: 5px;*/
+}
+
+.menu-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.menu-nav ul li:not(:last-child){
+    margin-right: 1em;
+}
+.home_info h2 {
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 4rem;
+    font-family: inherit;
+    letter-spacing: 15px;
+    opacity: 1;
+}
+.home_info h3 {
+    margin:8px;
+    z-index: 5;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 38px;
+    letter-spacing: 4px;
+    opacity: 1;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.home_info p {
+    color: #fff;
+}
+
+.home_details {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.home_content {
+    margin: auto;
+    max-width: 1045px;
+}
+.btns {
+    overflow: hidden;
+    margin-top: 2rem;
+    padding: 2rem;
+    position: relative;
+}
+.btns a {
+    text-decoration: none;
+    color: #fff;
+    background: #2496f3;
+    padding: 15px 30px;
+    border-radius: 3px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.h_title {
+    border-bottom: 1px solid;
+}
+
+
+
+.content {
+/*    margin: auto;
+    max-width: 1045px;*/
+    padding: 10px;
+    position: relative;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    
+}
+.set-height {
+    min-height: 80vh;
+    background: transparent;
+}
+/*Home Page Content styles*/
+.box_content {
+    overflow: hidden;
+}
+.box {
+    width: 49%;
+    float: left;
+}
+
+.box .one {
+    margin-right: 1%;
+}
+.fa-users {
+    font-size: 23px;
+    margin-right: 5px;
+
+}
+.h_title {
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+.features_header h3 {
+    font-size:24px;
+    margin: 0; 
+}
+
+.features_content {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.proj_content {
+    margin:auto;
+    max-width: 1045px;
+    color: #fff;
+    font-family: inherit;
+}
+.proj {
+    /*background-image: linear-gradient(to bottom,#000000bd,#000000ad),url('images/home-bg.jpg');*/
+    background-size: cover;
+    padding: 1rem;
+}
+.proj_box_content {
+    overflow: hidden;
+}
+.pro_box {
+    width: 23.5%;
+    float: left;
+    margin-right: 2%;
+    position: relative;
+}
+.pro_box img {
+    border-radius: 5px;
+    height: 150px;
+}
+
+.pro_box.fourth {
+    margin-right: 0;
+}
+
+.pro_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.pro_title h5 {
+    font-size: 18px;
+    background: #0000003b;
+    padding: 1rem;
+    width: 100%;
+}
+
+/*Home Page Content styles*/
+
+.profile-header {
+    background: #fff;
+    padding: 5px;
+}
+.profile-header p {
+    color :#2496f3;
+    font-weight: 400;
+    font-size: 18px;
+}
+.profile-header-text {
+    color: #000;
+    font-size: 17px;
+    font-weight: 300;
+}
+.profile-header-image img {
+  width: 100%;
+}
+
+.profile-details {
+    float: left;
+    width: 69%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: 1%;
+}
+
+.project-title {
+    font-size: 20px;
+    padding: 5px;
+    color: #2496f3;
+     border-radius: 5px 5px 0px 0px;
+}
+.project-title small {
+    display: block;
+    color: #000;
+    font-size: 14px;
+}
+
+.profile-sidebar {
+    overflow: hidden;
+    width: 25%;
+    float: left;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.sidebar-widget {
+    margin-top: 1rem;
+    background: #fff;
+   
+}
+
+.sidebar-widget:first {
+     border-radius: 5px 5px 0px 0px;
+}
+.sidebar-widget ul li small {
+    display: block;
+}
+
+.widget-title {
+    margin: 0;
+    font-size: 20px;
+    background: #000;
+    color: white;
+    text-align: left;
+    padding: 5px;
+}
+
+.profile-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.profile-sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #2bb0e7;
+}
+
+.profile-sidebar ul li a {
+    color: #2496f3;
+    text-decoration: none;
+    font-size: 18px;
+}
+.section-details h1 {
+    border-bottom: 1px solid;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #2496f3;
+}
+.section-details p {
+    font-family: 18px;
+    text-align: left;
+}
+
+.section-details h3 {
+    border-bottom: 1px solid;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #2496f3;
+}
+.mini-section {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.mini-section code {
+    display: block;
+    font-size: 12px;
+}
+.mini-section b {
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+
+}
+
+.post-text-area {
+    width: 100%;
+    height: 100px;
+}
+
+.post-button {
+    
+
+}
+
+.project .project-img {
+    width: 30%;
+    float: left;
+}
+.project .details {
+    width: 69%;
+    float: left;
+    margin-left: 1%;
+}
+
+.project .details h4 {
+    margin: 0;
+}
+.project ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.project ul li  {
+    display: inline-block;
+}
+
+.project ul li  a, .project ul li  a:visited {
+    text-decoration: none;
+    color: darkblue;
+
+}
+
+.details a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+
+.footer {
+    background: #2496f3;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 2px 0px 2px 2px rgba(0,0,0,0.16), 2px 0 0 1px rgba(0,0,0,0.08);
+
+}
+.login-footer {
+    background: transparent;
+    box-shadow: none;
+
+}
+.footer-content {
+    margin: auto;
+    max-width: 1024px;
+    overflow: hidden;
+}
+.footer-text {
+    float: left;
+    width: 40%;
+}
+
+.footer-menu {
+    float: right;
+    width: 60%;
+}
+.footer-menu ul {
+    list-style: none;
+    display: inline-block;
+    float: right;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.home {
+    padding: 0;
+    margin: 0;
+    max-width: initial;   
+}
+.home_info {
+    height: 83vh;
+}
+
+
+/*Signup form start*/
+.login {
+    background-image: linear-gradient(to bottom,#000000bd,#000000ad),url(images/home-bg.jpg);
+    margin:0;
+    max-width: 100%;
+    background-position: top;
+    background-size: cover;
+}
+
+.signup  {
+    border-radius: 5px;
+    background: #fff;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    box-shadow: 0px 2px 19px 8px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.signup-form input {
+    display: block;
+   padding: 10px;
+    border: 1px solid cadetblue;
+    outline: none;
+    font-size: 15px;
+
+}
+
+.signup-form p input {
+    display: inline;
+}
+
+.signup-form input:Not(:last-child){
+    margin-bottom: 0.5rem;
+}
+.signup-form label {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #2496f3;
+    display: inline-block;
+}
+
+.signup-form p {
+    display: block;
+
+}
+
+.btn {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.signup-button {
+     background: #2496f3;
+    color: #fff;
+    font-size: 14px;
+
+}
+
+.form-title {
+    margin: 0;
+    text-align: center;
+    background: #2496f3;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.login-title {
+    margin-bottom: 1rem;
+}
+
+/*Signup form end*/

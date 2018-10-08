@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{%block title%}ManagerPro | A Project Management System{%endblock%}</title>
+    {%load static%}
+        <link rel="stylesheet" type="text/css" href="{% static "accounts/style.css" %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="login">
+    <header class="header">
+        <div class="header-content">
+            <div class="site-branding">
+                <a href="{% url 'home' %}" ><h1>ManagerPro</h1><small>A Simple Project Manager</small></a>
+            </div>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+
+                </ul>
+            </nav>
+            {%block home_info%}
+            {%endblock%}
+         </div>
+    </header>
+       {%block content%}
+       {%endblock%}
+ <div class="clearFix"></div>
+     <div class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                     <p>&copy; All Rights Reserved | Made With <span class="black">&#10084;</span></p>
+                </div>
+
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+            </div>
+         
+     </div>
+</body>
+</html>
