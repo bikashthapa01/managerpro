@@ -438,6 +438,24 @@ img {
 
 
 /*Signup form start*/
+#head {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+}
+
+#head button {
+    border: none;
+    background:#2496f3;
+    color: #fff;
+    padding: 1rem;
+    font-family: inherit; 
+}
+#head button:focus {
+    background: #000;
+    color: #fff;
+}
 .login {
     background-image: linear-gradient(to bottom,#000000bd,#000000ad),url(images/home-bg.jpg);
     margin:0;

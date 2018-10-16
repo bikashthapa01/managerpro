@@ -3,10 +3,15 @@
 {% block content%}
   
   <div class="content set-height">
+
+      <div id="head">
+        <button onclick="display_student();">Student</button><button onclick="display_teacher();">Mentor</button>
+      </div>
        <div class="signup">
           <div class="signup-form">
                <form method="get">
-                <h1 class="form-title">Create New Account</h1>
+                  <div id="student_content" style="">
+                      <h1 class="form-title">Create Student Account</h1>
                     <p>
                        <input type="text" name="fName" placeholder="First Name">
                        <input type="text" name="lName" placeholder="Last Name">
@@ -25,9 +30,46 @@
                          <input type="text" name="phone" placeholder="Phone no.">
 
                     </p>
-                      <p> <button class="signup-button btn">Create Account</button> or <a href="{% url 'login' %}">Login</a></p>
+                     <p>
+                        <input type="text" name="password" placeholder="Password">
+                         <input type="text" name="repassword" placeholder="Confirm Password">
 
-                  </form>
+                    </p>
+
+                     <p> <button class="signup-button btn">Create Account</button> or <a href="{% url 'login' %}">Login</a></p>
+
+                    </div>
+
+                    <div id="teacher_content" style="display:none;">
+                        <h1 class="form-title">Create Mentor Account</h1>
+                        <p>
+                           <input type="text" name="fName" placeholder="First Name">
+                           <input type="text" name="lName" placeholder="Last Name">
+                       </p>
+
+                        <p>  
+                           <input type="text" name="username" placeholder="Username">
+                           <input type="text" name="institute" placeholder="Institute">   
+                        </p>
+                        <p>                      
+                           <input type="text" name="department" placeholder="Department">
+                           <input type="text" name="desigination" placeholder="Desigination">
+                        </p>
+                        <p>
+                            <input type="text" name="email" placeholder="Email">
+                             <input type="text" name="phone" placeholder="Phone no.">
+
+                        </p>
+                         <p>
+                            <input type="text" name="password" placeholder="Password">
+                            <input type="text" name="repassword" placeholder="Confirm Password">
+
+                        </p>
+
+                         <p> <button class="signup-button btn">Create Account</button> or <a href="{% url 'login' %}">Login</a></p>
+                        </div>
+                    
+                </form>
           </div>
        </div>
 
