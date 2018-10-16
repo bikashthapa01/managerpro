@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Project Page</title>
-    <link rel="stylesheet" type="text/css" href="profile.css">
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <div class="site-branding">
-                <h1>ManagerPro</h1><small>A Simple Project Manager</small>
-            </div>
+{%extends 'accounts/base.html'%}
 
-            <nav class="menu-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </nav>
-         </div>
-    </header>
-    <div class="content">
+{% block content%}
+{%load static %}
+    <div class="content set_width">
         <div class="profile-sidebar">
              <div class="profile-header">
                 <div class="profile-header-image">
-                    <img src="cute.jpg">
+                    <img src="{% static "accounts/images/cute.jpg" %}">
                     <h1 class="project-title">Bikash Thapa <small>@1ST16CS710</small></h1>
                 </div>
             </div>
@@ -73,10 +55,10 @@
                  <h1>Recent Projects</h1>
                  <div class="mini-section project">
                     <div class="project-img">
-                        <img src="angel.jpg">
+                        <img src="{% static "accounts/images/angel.jpg" %}">
                     </div>
                     <div class="details">
-                         <h4><a href="page.html">Project & Placement Management</a></h4><small>Date: 2018-02-18</small>
+                         <h4><a href="{% url 'page' %}">Project & Placement Management</a></h4><small>Date: 2018-02-18</small>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
@@ -92,7 +74,7 @@
 
                 <div class="mini-section project">
                     <div class="project-img">
-                        <img src="cute.jpg">
+                        <img src="{% static "accounts/images/cute.jpg" %}">
                     </div>
                     <div class="details">
                          <h4><a href="page.html">Rental Home Management</a></h4><small>Date: 2018-03-02</small>
@@ -111,7 +93,7 @@
 
                 <div class="mini-section project">
                     <div class="project-img">
-                        <img src="bg.png">
+                        <img src="{% static "accounts/images/bg.png" %}">
                     </div>
                     <div class="details">
                          <h4><a href="page.html">Project Management System</a></h4><small>Date: 2019-02-18</small>
@@ -128,29 +110,10 @@
                     </ul>
                  </div>
             </div>
-           
+           </div>
+       </div>
             
-        </div>
 
 
-     </div>
 
-     <div class="footer">
-            <div class="footer-content">
-                <div class="footer-text">
-                     <p>&copy; All Rights Reserved | Made With <span class="black">&#10084;</span></p>
-                </div>
-
-                <div class="footer-menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Developers</a></li>
-                    </ul>
-                </div>
-            </div>
-         
-     </div>
-</body>
-</html>
+{%endblock%}

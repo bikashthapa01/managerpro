@@ -7,9 +7,19 @@ body {
     background-position: center;
     background-attachment: fixed;
     font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 400;
+}
+html {
+   font-family: 'Ubuntu Condensed', sans-serif;
 }
 img {
     width: 100%;
+}
+.set_width {
+    max-width: 1045px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .clearFix {
     content: "";

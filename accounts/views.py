@@ -10,3 +10,9 @@ def login(request):
 
 def signup(request):
     return render(request,'accounts/signup.html',{})
+
+def profile(request):
+    return render(request,'accounts/profile.html',{})
+
+def page(request):
+    return render(request,'accounts/page.html',{})

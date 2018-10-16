@@ -1,9 +1,9 @@
 from django.db import models
-from django.contrib.admin.models import AbstractBaseUser
+# from django.contrib.admin.models import AbstractBaseUser
 
 # Create your models here.
 
-class Mentor(models.MODEL):
+class Mentor(models.Model):
     fname = models.CharField(max_length=100)
     lname = models.CharField(max_length=100)
     username = models.CharField(max_length=20,unique=True)
@@ -18,8 +18,8 @@ class Mentor(models.MODEL):
         return fname+" "+ lname
 
 
-class User(AbstractBaseUser):
-    pass 
+# class User(AbstractBaseUser):
+#     pass 
 
 
 
