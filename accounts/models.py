@@ -18,8 +18,10 @@ class Mentor(models.Model):
         return fname+" "+ lname
 
 
-# class User(AbstractBaseUser):
-#     pass 
+class Student(models.Model):
+    usn = models.CharField(max_length=10)
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=10)
 
 
 
