@@ -1,0 +1,224 @@
+body {
+    background: #ccc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.synopsis p {
+    font-size: 20px;
+}
+small {
+    display: block;
+}
+
+.university_info h1 small {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.synopsis {
+    background: white;
+    display: block;
+    max-width: 21cm;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 10px;
+}
+
+.university_info {
+    text-align: center;
+}
+.university_info h1 {
+
+    font-weight: 400;
+    font-size: 30px;
+
+}
+
+.university_info img {
+    width: 17%;
+    height: 17%;
+    margin: 1rem;
+}
+.project_info {
+    text-align: center;
+}
+
+.project_info h2 {
+    margin: 7px;
+    font-size: 25px;
+
+}
+
+
+.student_info h3 {
+    text-decoration: underline;
+}
+
+
+
+.student_info li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    text-align: justify;
+   
+    
+}
+.stream  p {
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+
+.stn {
+   
+   overflow: hidden;
+   position: relative;
+   left: 32%;
+}
+.stn li {
+    font-size: 18px;
+}
+
+.names {
+    float: left;
+    margin-right: 7%;
+   
+}
+
+.usn {
+    float: left;
+}
+.college_info {
+    margin-top: 1rem;
+}
+.college_info img {
+    width: 10%;
+    height: 10%;
+    margin: 0.5rem;
+}
+.college_info p {
+    font-size: 18px;
+}
+
+.title p {
+    text-decoration: underline;
+}
+
+.title h1,.headline {
+    margin: 1rem;
+    font-size: 23px;
+    font-weight: 700;
+}
+.headline {
+    font-weight: 500;
+    margin: 1.5rem;
+}
+.introduction p,.obj_content p {
+    font-size: 17px;
+    
+}
+.intro_content,.obj_content,.schema_content,.front_content ,.spec_content {
+    padding: 2rem;
+    padding-top: 0;
+    text-align:left;
+}
+.headline small {
+    font-size: 13px;
+}
+
+.requirements_front {
+    overflow: hidden;
+}
+
+
+.front_content {
+    overflow: hidden;
+}
+
+.front_content li {
+    list-style: none;
+}
+
+.front_name  {
+    width: 30%;
+    float: left;
+}
+
+.front_desc {
+    width: 70%;
+    float: left;
+    text-align: left;
+}
+
+.front_name li , .front_desc li, {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+@page {
+   size: 7in 9.25in;
+   
+}
+
+
+/*for print */
+@media print {
+
+    .synopsis {
+        box-shadow:none;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .synopsis p {
+        
+        font-weight: 400 !important;
+    }
+    .project_info p {
+        margin: 0;
+    }
+
+    .stn {
+        left: 32%;
+    }
+    .names {
+       
+        margin-right: 6%;
+    }
+
+    .college_info p , .stream p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 22px !important;
+        font-weight: 400;
+    }
+
+    .f-btn {
+        display: none;
+    }
+
+
+}
+.f-btn {
+    position: fixed;
+    top: 5%;
+}
+.f-btn a{
+    background: red;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+}
+.f-btn a {
+    text-decoration: none;
+}
+.f-btn a:visited {
+    color: #fff;
+    text-decoration: none;
+}

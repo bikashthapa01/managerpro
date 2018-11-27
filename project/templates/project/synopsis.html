@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Synopsis For MiniProject</title>
+    <link rel="stylesheet" type="text/css" href="{% static "accounts/synopsis.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+</head>
+<body>
+
+    <div class="f-btn">
+        <a href="{% url "view-project" pdata.id %}"> Go Back</a>
+        <a href="#print" style="background: #9C27B0;" onclick="window.print()">Print</a>
+    </div>
+    <div class="synopsis">
+
+        <div class="university_info">
+            <h1>VISVESVARAYA TECHNOLOGICAL UNIVERSITY <small>Belagavi, Karnataka , India</small></h1>
+            <img src="{% static "accounts/images/logo.png" %}">
+
+        </div>
+
+        <div class="project_info">
+            <p>Synopsis Report on </p>
+            <h2>"{{pdata.name}}"</h2>
+            <p>A mini Project Submitted on Partial Fulfilment of requirements <small>for</small>
+            </p>
+        </div>
+
+        <div><p><b>Database Management System Laboratory </b><small>of</small></p></div>
+        <div class="stream"><p><b>Bachelor of Engineering</b> <small>in</small> <b>Computer Science</b></p></div>
+        <div class="asb">
+        <div class="student_info">
+            <h3>Submitted By: </h3>
+            <div class="stn">
+                <div class="names">
+                    <li>{{sdata.fname}} {{sdata.lname}}</li>
+                </div>
+            
+            <div class="usn">
+                <li>{{sdata.usn}}</li>
+            </div>
+        </div>
+            </div>
+           
+        </div>
+
+    <div class="asb">
+        <div class="student_info">
+            <h3>Supported By: </h3>
+            <div class="stn">
+                <div class="names">
+                    <li>{{tdata.fullName}}</li>
+                </div>
+            
+            <div class="usn">
+                <li>{{tdata.designation}}</li>
+            </div>
+        </div>
+            </div>
+           
+        </div>
+
+        <div class="college_info">
+            <img src="{% static "accounts/images/sambhram.jpg" %}">
+            <p>Department of Computer Science & Engineerinig <br> 
+                Sambhram Institute of Technology,Bangalore - 97
+            </p>
+        </div>
+
+    </div>
+
+    <div class="synopsis">
+        <div class="title">
+            <p>Title of The Project</p>
+            <h1>{{pdata.name}}</h1>
+        </div>
+
+        <div class="introduction">
+                <h2 class="headline">INTRODUCTION</h2>
+            <div class="intro_content">
+                <p>
+                   {{pdata.introduction}}
+                </p>
+            </div>
+        </div>
+
+        <div class="objectives">
+            <h2 class="headline">OBJECTIVES</h2>
+            <div class="obj_content">
+                 <p>
+                     The main goal of this projects is to reduce Time. It saves time by automating set of boring tasks that manager have to perform regulary and digitizing them so that manager can update them from anywhere. 
+                 </p>
+                <p>
+                     That taks could be maintaining the list of projects, peoples that are working under his supervision, maintaining the progress report for each projects, guiding team members to solve problems and so on. Few Advantages of having this kind of software is given below: 
+                </p>
+                <li>Reduce Time & Space Complexity</li> 
+                <li>The increase in efficiency of Manager</li>
+                <li>Easy Access to the new and old projects</li>
+                <li>Easy to Review projects and give Suggesstion</li> 
+                <li>Easy to Contact Developers and Mentors</li> 
+                <li>Easy to Review Workflow of Projects</li>
+            </div>
+        </div>
+    </div>
+
+    <div class="synopsis">
+        <div class="schema">
+            <h2 class="headline">DATABASE SCHEMA</h2>
+            <div class="schema_content">
+                <p>
+                        <li>ADMIN(id,name,username,password,picture)</li>
+                        <li>STUDENT(usn,pass,name,section,department,mentors,)</li>
+                        <li>MENTOR(id,username,pass,name,department,desigination,skills)</li>
+                        <li>PROJECT(id,user,name,intro,obje,schema,specification,requirements)</li>
+                        <li>COMMENT(id,message_body)</li>
+                        <li>DISSCUSSION(id,message,reply,student,mentor,project)</li>
+                </p>
+            </div>
+        </div>
+
+    <div class="requirements_front">
+             <h2 class="headline">FRONT-END <small>HTML/CSS/BOOTSTRAP</small></h2>
+             <div class="front_content">
+                    <li>
+                        <div class="front_name">
+                            <ol>HTML : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>It is a Hypertext Markup Language Version 5 , Mainly used to design the        skeleton of the any web based application.</ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="front_name">
+                            <ol>CSS : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>Cascading Stylesheet Version 3 is styling language used to prettify the        web based appliction designed with HTML.</ol>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="front_name">
+                            <ol>BOOTSTRAP : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>It is a CSS framework, which provide predefined css class which can be         used with HTML tags, Here Bootstrap is used to speedup the  development process.</ol>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="front_name">
+                            <ol>JavaScript : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>It is a language which is also characterized as dynamic, weakly typed,         prototype-based and multi-paradigm, used to program the behavior of         webpages.</ol>
+                        </div>
+                    </li>
+
+
+             </div>
+        </div>
+<div class="requirements_front">
+             <h2 class="headline">BACK-END <small>Django With MySQL</small></h2>
+             <div class="front_content">
+                    <li>
+                        <div class="front_name">
+                            <ol>PYTHON : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>Its is an interpreted high level programing language for general purpose        programming.</ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="front_name">
+                            <ol>DJANGO : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>It is a Web Development Framework based on Python programming           language. It is used for rapid web development process, it contains all         the tools required for a complete backend web developent.</ol>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="front_name">
+                            <ol>MySQL : </ol>
+                        </div>
+
+                        <div class="front_desc">
+                            <ol>It is a one of the popular Database system used with many type of           application.  It is really easy to integrate MySql with any kind of             computer applications, it is popular and easy to use supported by large         number of open source community.</ol>
+                        </div>
+                    </li>
+
+             </div>
+        </div>
+             
+    </div>
+
+    <div class="synopsis">
+        <div class="specification">
+            <h2 class="headline">REQUIREMENTS <small>Basic Requirements of Application</small></h2>
+           <div class="spec_content">
+            <p>
+                <li>Operating System: Linux, Windows, MAC </li>
+                <li>Python : Version 3.7 or Above </li>
+                <li>Django : Version 2.1 or Above</li>
+                <li>MySQL : Version 14 or Above</li>
+            </p>
+           </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>

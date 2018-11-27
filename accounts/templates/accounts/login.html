@@ -4,15 +4,17 @@
       <div class="content set-height">
        <div class="signup">
           <div class="signup-form">
-               <form method="get">
+               <form method="post" accept="{% url "login" %}">
+                {% csrf_token %}
                 <h1 class="form-title login-title">Login</h1>
+                        <small>{{msg}}</small>
                         <input type="text" name="username" placeholder="USN/Username">
                         <input type="password" name="password" placeholder="Password">
-                      <p> <button class="signup-button btn">Login</button> or <a href="{% url 'register' %}">Register</a></p>
+                      <p>
+                        <button class="signup-button btn">Login</button> or <a href="{% url 'register' %}">Register</a>
+                      </p>
                   </form>
           </div>
        </div>
-
-
      </div>
 {%endblock%}

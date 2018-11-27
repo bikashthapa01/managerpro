@@ -1,0 +1,116 @@
+{%extends 'accounts/base.html'%}
+
+{%block content%}
+{%load static %}
+ <div class="content set_width trans">
+        <div class="profile-sidebar">
+             <div class="profile-header">
+
+                <div class="profile-header-image">
+                
+                    <img src="{{pdata.image_url}}">
+                    <h1 class="project-title">{{pdata.name}}</h1>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Developer: </h1>
+                <ul>
+                     <li>{{sdata.fname}} {{sdata.lname}}<small>{{sdata.usn}}</small></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Mentor: </h1>
+                <ul>
+                    <li>{{tdata.fullName}}<small>{{tdata.designation}}</small></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                 <ul>
+                    <li><a href="#">Ask Questions</a></li>
+                    <li><a href="#">New Updates</a></li>
+                    <li><a href="#">Follow Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+       
+
+ <!--   <div class="profile-header-info">
+                <p>Title: <span class="profile-header-text">Placement & Training Management System</span></p>
+                <p>Members: <span class="profile-header-text">Abhinav Kumar,Vishal Kumar</span></p>
+                <p>Mentors: <span class="profile-header-text">Mrs. Sowmya B.</span></p>
+                <p>Department:  <span class="profile-header-text">Computer Science</span></p>
+            </div> -->
+
+       <!--  <div class="profile-sidebar">
+                <ul>
+                    <li><a href="#">Ask Questions</a></li>
+                    <li><a href="#">New Updates</a></li>
+                    <li><a href="#">Follow Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div> -->
+
+        <div class="profile-details">
+              <div class="btn-section">
+                    
+                   {%if user.is_student %}
+                    <a href="{% url "view-synopsis" pdata.id %}"> <button style="background: #673AB7;">Synosis</button> </a>
+                    <a href="{% url "update-project" pdata.id %}"><button style="background: #3F51B5;">Update</button></a>
+                    <a href="{% url "delete-project" pdata.id %}"><button style="background: #F44336;">Delete</button></a>
+
+                    {% else %}
+
+                    <a href="{% url "view-synopsis" pdata.id %}"> <button style="background: #673AB7;">View Synopsis</button> </a>
+                   {% endif %}
+                </div>
+            <div class="section-details">
+                 <h1>Introduction</h1>
+                 <p>{{pdata.introduction}}</p>
+            </div>
+           
+            <div class="section-details">
+                 <h1>Objectives</h1>
+                 <p>{{pdata.objectives}}</p>
+            </div>
+
+             <div class="section-details schema">
+                 <h1>Database Schema</h1>
+                 <p>{{pdata.db_schema}}</p>
+            </div>
+
+             <div class="section-details">
+                 <h1>Specifications</h1>
+
+                 <div class="mini-section">
+                     <h3>Front-End</h3>
+                      <ul>
+                         {{pdata.frontEnd}}
+                     </ul>
+                 </div>
+
+                 <div class="mini-section">
+                     <h3>Backend</h3>
+                      <ul>
+                         {{pdata.backEnd}}
+                     </ul>
+                 </div>
+            </div>
+
+             <div class="section-details">
+                 <h1>Requirements</h1>
+                 <ul>
+                    {{pdata.requirements}}
+                 </ul>
+            </div>
+
+          
+        </div>
+
+
+     </div>
+{%endblock%}

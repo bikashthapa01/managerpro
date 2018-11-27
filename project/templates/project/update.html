@@ -1,0 +1,59 @@
+{% extends 'accounts/base.html' %}
+{% block title%} Create New Project | {{block.super}} {% endblock %}
+{%block content %}
+	<div class="set_height">
+
+		<form method="post" id="myForm">
+			{% csrf_token %}
+
+		<ul id="progressbar">
+			<li class="active">Introduction</li>
+			<li>Objectices & Schema</li>
+			<li>Programming Languages</li>
+			<li>Requirements</li>
+		</ul>
+
+		<fieldset>
+			<h2 class="fs-title">Project Introduction</h2>
+			<h3 class="fs-sub">Name & Short Info</h3>
+			{{form.name}}
+			{{form.image_url}}
+			{{form.introduction}}
+			<input type="button" name="next" class="next" value="Next">
+		</fieldset>
+
+		<fieldset>
+			<h2 class="fs-title">Objectives & Schema</h2>
+			<h3 class="fs-sub">More Info on Schema</h3>
+			{{form.objectives}}
+			{{form.db_schema}}
+			<input type="button" name="previous" class="previous" value="Previous">
+			<input type="button" name="next" class="next" value="Next">
+			
+		</fieldset>
+
+		<fieldset>
+			<h2 class="fs-title">Programing Languages</h2>
+			<h3 class="fs-sub">Front-End & BackEnd</h3>
+			{{form.frontEnd}}
+			{{form.backEnd}}
+			<input type="button" name="previous" class="previous" value="Previous">
+			<input type="button" name="next" class="next" value="Next">
+		</fieldset>
+
+		<fieldset>
+			<h2 class="fs-title">Reqirements</h2>
+			<h3 class="fs-sub">Basic Requirements</h3>
+			{{form.requirements}}
+			<label>Select Mentor: </label>
+			{{form.teacher}}
+			<br>
+			<input type="button" name="previous" class="previous" value="Previous">
+			<input type="submit" value="Update Project">
+		</fieldset>
+
+	</form>
+
+		
+	</div>
+{%endblock%}

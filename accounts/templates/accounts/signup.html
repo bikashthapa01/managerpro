@@ -9,32 +9,28 @@
       </div>
        <div class="signup">
           <div class="signup-form">
-               <form method="get">
+               <form method="post" action=".">
+                  {% csrf_token %}
                   <div id="student_content" style="">
                       <h1 class="form-title">Create Student Account</h1>
-                    <p>
-                       <input type="text" name="fName" placeholder="First Name">
-                       <input type="text" name="lName" placeholder="Last Name">
-                   </p>
+                      
+                      <code style="color: red;"> {{err}} </code>
+                      <p>
+                        <input type="text" name="usn" placeholder="ex. 1st16cs710">
+                      </p>
+                      <p>
+                         <input type="email" name="email" placeholder="Email">
+                      </p>
 
-                    <p>  
-                       <input type="text" name="usn" placeholder="USN">
-                       <input type="text" name="institute" placeholder="Institute">   
-                    </p>
-                    <p>                      
-                       <input type="text" name="department" placeholder="Department">
-                       <input type="text" name="section" placeholder="Section">
-                    </p>
-                    <p>
-                        <input type="text" name="email" placeholder="Email">
-                         <input type="text" name="phone" placeholder="Phone no.">
-
-                    </p>
-                     <p>
-                        <input type="text" name="password" placeholder="Password">
-                         <input type="text" name="repassword" placeholder="Confirm Password">
-
-                    </p>
+                      <p>
+                        <input type="password" name="password" placeholder="Password">
+                      </p>
+                      <p>
+                        <input type="password" name="rpassword" placeholder="Confirm Password">
+                      </p>
+                       
+                      <input type="hidden" name="is_student" value="1">
+                      <input type="hidden" name="is_mentor" value="0">
 
                      <p> <button class="signup-button btn">Create Account</button> or <a href="{% url 'login' %}">Login</a></p>
 
@@ -42,32 +38,25 @@
 
                   </form>
 
-                  <form method="get">
+                  <form method="post" action=".">
+                  {% csrf_token %}
                     <div id="teacher_content" style="display:none;">
                         <h1 class="form-title">Create Mentor Account</h1>
-                        <p>
-                           <input type="text" name="fName" placeholder="First Name">
-                           <input type="text" name="lName" placeholder="Last Name">
-                       </p>
-
-                        <p>  
-                           <input type="text" name="username" placeholder="Username">
-                           <input type="text" name="institute" placeholder="Institute">   
-                        </p>
-                        <p>                      
-                           <input type="text" name="department" placeholder="Department">
-                           <input type="text" name="desigination" placeholder="Desigination">
-                        </p>
-                        <p>
-                            <input type="text" name="email" placeholder="Email">
-                             <input type="text" name="phone" placeholder="Phone no.">
-
-                        </p>
                          <p>
-                            <input type="text" name="password" placeholder="Password">
-                            <input type="text" name="repassword" placeholder="Confirm Password">
+                        <input type="text" name="username" placeholder="ex. sowmya11">
+                      </p>
+                      <p>
+                         <input type="email" name="email" placeholder="Email">
+                      </p>
 
-                        </p>
+                      <p>
+                        <input type="password" name="password" placeholder="Password">
+                      </p>
+                      <p>
+                        <input type="re-password" name="rpassword" placeholder="Confirm Password">
+                      </p>
+                      <input type="hidden" name="is_mentor" value="1">
+                      <input type="hidden" name="is_student" value="0">
 
                          <p> <button class="signup-button btn">Create Account</button> or <a href="{% url 'login' %}">Login</a></p>
                         </div>

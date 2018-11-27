@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{%block title%}ManagerPro | A Project Management System{%endblock%}</title>
+    <title>{%block title%}ManagerPro {%block site-desc %} | A Simple Project Management System {% endblock %}{%endblock%}</title>
     {%load static%}
         <link rel="stylesheet" type="text/css" href="{% static "accounts/style.css" %}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script type="text/javascript" src="{% static "accounts/js/jquery.js" %}"></script>
+        
         
 </head>
 <body class="login">
@@ -17,9 +19,15 @@
             <nav class="menu-nav">
                 <ul>
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'register' %}">Register</a></li>
+                    {%block menu%}
+                    {%endblock%}
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'profile-home' %}">Profile</a></li>
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {%else %}
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                    {%endif%}
 
                 </ul>
             </nav>
@@ -29,6 +37,8 @@
     </header>
        {%block content%}
        {%endblock%}
+
+       
  <div class="clearFix"></div>
      <div class="footer">
             <div class="footer-content">
@@ -48,5 +58,8 @@
          
      </div>
      <script type="text/javascript" src="{% static "accounts/js/modules.js" %}"></script>
+    <script type="text/javascript" src="{% static "accounts/js/jquery.easing.min.js" %}"></script>
+
+
 </body>
 </html>

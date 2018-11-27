@@ -1,0 +1,129 @@
+{%extends "accounts/base.html"%}
+{%block title%} Update Profile | {{block.super}} {%endblock%}
+{% block content%}
+  {% if user.is_authenticated %} 
+  	{% if user.is_student %}
+
+	  <div class="content set_width">
+			<div class="student_profile_edit new">
+			<form action="." method="post">
+				{{ form.non_field_errors }}
+				{% csrf_token %}
+				<h1 class="edit_header">Update Profile <span style="float:right; color:#fff;font-size:17px;padding:inherit;">{{notification}}</span></h1>
+				<div class="profile_image">
+					<img id="prof" src="{{form.instance.image_url}}">
+					<p>
+						<label>Change Profile Image: </label>
+						{{form.image_url}}
+					</p>
+				</div>
+				<div class="profile_details">
+					<p>
+						<label>First Name: </label>
+						{{form.fname}}
+					</p>
+					<p>
+						<label>Last Name: </label>
+						{{form.lname}}
+					</p>
+
+						<label>Gender: </label>
+						{{form.gender}}
+
+					<p>
+						<label>Enter USN: </label>
+						{{form.usn}}
+					</p>
+
+					<p>
+						<label>Institute: </label>
+						{{form.college}}
+					</p>
+
+					<label>Section: </label>
+					{{form.section}}
+
+						<label>Semester: </label >
+						{{form.semester}}
+		
+						<label>Department: </label>
+						{{form.department}}
+
+					<p>
+						<label>Bio: </label>
+						{{form.bio}}
+					</p>
+
+
+						
+						<input type="hidden" name="is_complete" value="1">
+						<!-- <p>
+							<label>Select User: </label>
+							{{form.user}}
+						</p> -->
+						<input type="submit" value="Update Profile">
+
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+  	{% else %}
+
+  		<div class="content set_width">
+			<div class="student_profile_edit new">
+			<form action="." method="post">
+				{{ form.non_field_errors }}
+				{% csrf_token %}
+				<h1 class="edit_header">Update Profile <span style="float:right; color:#fff;font-size:17px;padding:inherit;">{{notification}}</span></h1>
+				<div class="profile_image">
+					<img id="prof" src="{{form.instance.image_url}}">
+					<p>
+						<label>Change Profile Image: </label>
+						{{form.image_url}}
+					</p>
+				</div>
+				<div class="profile_details">
+						<p>
+							<label>Full Name: </label>
+							{{form.fullName}}
+						</p>
+
+						<p>
+							<label>Gender: </label>
+							{{form.gender}}
+						</p>
+
+						<p>
+							<label>College:  </label>
+							{{form.college}}
+						</p>
+							<label>Department: </label>
+							{{form.department}}
+
+							<label>Designation: </label>
+							{{form.designation}}
+						<P>
+							<label>Bio: </label>
+							{{form.bio}}
+						</P>
+						<p>
+							<label>Experiences: </label>
+							{{form.experiences}}
+						</p>
+
+						<p>
+							<label>Educations: </label>
+							{{form.educations}}
+						</p>
+						<input type="submit" value="Update Profile">
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+  	{% endif %}
+  {%endif%}
+{%endblock%}

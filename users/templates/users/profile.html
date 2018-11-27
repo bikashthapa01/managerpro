@@ -1,0 +1,199 @@
+{%extends 'accounts/base.html'%}
+{%block title%} Dashboard | {{block.super}} {% endblock%}
+{%block content %}
+{%load static %}
+   {% if user.is_student %}
+                {% for i in data%}
+                <div class="content set_width trans">
+                     <div class="profile-sidebar">
+             <div class="profile-header">
+                <div class="profile-header-image">
+                    <img src="{{i.image_url}}">
+                    <h1 class="project-title">{{i.fname}} {{i.lname}}<small>@{{user.username}}</small></h1>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Bio: </h1>
+                <p>{{i.bio}}</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Details</h1>
+                <ul>
+                     <li>Section: <small>{{i.section}}</small></li>
+                     <li>Department: <small class="dept">{{i.department}}</small></li>
+                     <li>College: <small>{{i.college}}</small></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                 <ul>
+                    <li><a href="#">Ask Questions</a></li>
+                    <li><a href="#">New Updates</a></li>
+                    <li><a href="#">Follow Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+       
+
+        <div class="profile-details">
+
+            <div class="section-details">
+               
+                   <!--  <textarea class="post-text-area" name="post"></textarea> -->
+                    <a href="/project/new"><button class="post-button btn">Create New Project</button></a>
+                    <a href="/discuss"><button class="post-button btn">Discussion</button></a>
+                    <a href="{% url "profile-update" %}"><button class="post-button btn">Edit Profile</button></a>
+               
+            </div>
+
+            <div class="section-details">
+                 <h1>Recent Projects</h1>
+                
+                   {%for i in project%}
+
+                        <div class="mini-section project">
+                            <div class="project-img">
+                        <img src="{{i.image_url}}">
+                    </div>
+                    <div class="details">
+                         <h4><a href="{% url "view-project" i.id %}">{{i.name}}</a></h4><small>Date: 2018-02-18</small>
+                        <p>
+                           {{i.introduction}}
+                        </p>
+                    </div>
+                    <div class="clearFix"></div>
+                    <ul>
+                       <li><i class="fa fa-star" style="color:#E91E63;" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-comments" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-download" aria-hidden="true"></i></li>
+                    </ul>
+                        </div>
+                   {% endfor%}
+                 
+
+
+            </div>
+            </div>
+        </div>
+    {%endfor%}
+   {% endif %}
+
+   {% if user.is_mentor %}
+
+     {% for i in data%}
+                <div class="content set_width mentor trans">
+                     <div class="profile-sidebar">
+             <div class="profile-header">
+                <div class="profile-header-image">
+                    <img src="{{i.image_url}}">
+                    <h1 class="project-title">{{i.fullName}}<small>@{{user.username}}</small></h1>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Bio: </h1>
+                <p>{{i.bio}}</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Education: </h1>
+                <p>{{i.educations}}</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Experiences: </h1>
+                <p>{{i.experiences}}</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h1 class="widget-title">Work : </h1>
+                <ul>
+                     <li>Department: <small class="dept">{{i.department}}</small></li>
+                     <li>College: <small>{{i.college}}</small></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                 <ul>
+                    <li><a href="#">Ask Questions</a></li>
+                    <li><a href="#">New Updates</a></li>
+                    <li><a href="#">Follow Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+       
+
+        <div class="profile-details">
+
+            <div class="section-details">
+               
+                   <!--  <textarea class="post-text-area" name="post"></textarea> -->
+                    <a href="{% url "show-all" i.id %}"><button class="post-button btn">All Projects</button></a>
+                    <a href="/discuss"><button class="post-button btn">Discussion</button></a>
+                    <a href="{% url "profile-update" %}"><button class="post-button btn">Edit Profile</button></a>
+               
+            </div>
+
+            <div class="section-details">
+                 <h1>Recent Projects</h1>
+                
+                   {%for i in project%}
+
+                        <div class="mini-section project">
+                            <div class="project-img">
+                        <img src="{{i.image_url}}">
+                    </div>
+                    <div class="details">
+                         <h4><a href="{% url "view-project" i.id %}">{{i.name}}</a></h4><small>Date: 2018-02-18</small>
+                        <p>
+                           {{i.introduction}}
+                        </p>
+                    </div>
+                    <div class="clearFix"></div>
+                    <ul>
+                        <li><i class="fa fa-star" style="color:#E91E63;" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-comments" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-download" aria-hidden="true"></i></li>
+                    </ul>
+                        </div>
+                   {% endfor%}
+
+                 </div>
+            </div>
+        </div>
+    {%endfor%}
+   
+
+   {% endif %}
+
+
+
+{% if display_all %}
+    
+   <div class="content set_width pro">
+       <h1 class="project-head-title">All Projets Mentored by: </h1>
+
+       <div class="projects-list">
+        {% for i in pdata %}
+        <div class="pro-box">
+            <img src="{{i.image_url}}">
+            <h2>{{i.name}}</h2>
+            <p>{{i.introduction | slice:":200"}}</p>
+            <a href="{% url "view-project" i.id %}"><button>View</button></a>
+        </div>
+        {% endfor %}
+       
+   </div>
+   </div>
+   
+{% endif %}
+
+
+
+{%endblock%}

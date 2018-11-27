@@ -15,6 +15,9 @@ html {
 img {
     width: 100%;
 }
+button {
+    cursor: pointer;
+}
 .set_width {
     max-width: 1045px;
     margin: auto;
@@ -64,6 +67,52 @@ img {
 .site-branding small {
     color: #fff;
 }
+
+.sub-title {
+  font-family: inherit;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #fff;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; }
+
+.main-title {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 5rem;
+  animation: moveInRight 2s ease-out; }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 .menu-nav {
     float: right;
     width: 70%;
@@ -204,7 +253,7 @@ img {
     overflow: hidden;
 }
 .pro_box {
-    width: 23.5%;
+    width: 23%;
     float: left;
     margin-right: 2%;
     position: relative;
@@ -223,6 +272,8 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
 
 }
 .pro_title h5 {
@@ -230,6 +281,12 @@ img {
     background: #0000003b;
     padding: 1rem;
     width: 100%;
+}
+
+.pro_box:hover .pro_title {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
 }
 
 /*Home Page Content styles*/
@@ -259,6 +316,7 @@ img {
     padding: 1rem;
     border-radius: 5px 5px 0px 0px;
     margin-left: 1%;
+    min-height: 85vh
 }
 
 .project-title {
@@ -284,6 +342,9 @@ img {
     margin-top: 1rem;
     background: #fff;
    
+}
+.sidebar-widget p {
+    padding: 1rem;
 }
 
 .sidebar-widget:first {
@@ -348,6 +409,10 @@ img {
     display: block;
 
 }
+.mini-section ul, .schema p ,.section-details ul{
+    white-space: pre-line;
+    text-transform: uppercase;
+}
 
 .post-text-area {
     width: 100%;
@@ -363,6 +428,9 @@ img {
     width: 30%;
     float: left;
 }
+.project-img img {
+    height: 145px;
+}
 .project .details {
     width: 69%;
     float: left;
@@ -376,11 +444,14 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+    white-space: inherit;
 
 }
 
 .project ul li  {
     display: inline-block;
+    margin-right: 2rem;
+    font-size: 18px;
 }
 
 .project ul li  a, .project ul li  a:visited {
@@ -543,3 +614,246 @@ img {
 }
 
 /*Signup form end*/
+
+/*Profile Edit style */
+
+.profile_details input {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border:1px solid #ccc;
+}
+.profile_image input {
+    padding: 10px;
+    width: 100%;
+    border:1px solid #ccc;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+.profile_image label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+.profile_details select {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.edit_header {
+    background: #2396f3;
+    margin: 5px;
+    padding: 5px;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.profile_image {
+    width: 30%;
+    float: left;
+    padding: 5px;
+
+}
+
+.profile_details {
+    width: 65%;
+    float: left;
+    margin-left: 4%;
+}
+.profile_details p label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    display: block;
+}
+.profile_image p {
+    padding: 5px;
+}
+.profile_details p textarea {
+    height: 130px;
+    width: 90%;
+    border: 2px solid #2396f38a;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 1rem;
+}
+
+/*Project form style */
+.set_height {
+    min-height: 72.5vh;
+}
+#myForm {
+    width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+#myForm fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+/*Hide all except first fieldset*/
+#myForm fieldset:not(:first-of-type) {
+    display: none;
+}
+/*inputs*/
+#myForm input, #myForm textarea,#myForm select {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+#myFrom label {
+    padding: 10px;
+}
+#myForm textarea {
+        height: 10rem;
+        white-space: pre-wrap;
+}
+/*buttons*/
+#myForm .action-button {
+    width: 100px;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+#myForm .action-button:hover, #myForm .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+.fs-sub {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    padding: 0;
+}
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    background: #27AE60;
+    color: white;
+}
+
+/*project form*/
+
+
+/*All Projects*/
+
+.project-head-title {
+    text-align: center;
+    background: #2396f3;
+    padding: 1rem;
+    margin-top: 0;
+    display: -webkit-inline-box;
+    color: #fff;
+}
+.pro-box {
+    width: 46%;
+    float: left;
+    padding: 0.5rem;
+    background: #fff;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    min-height: 435px;
+}
+.pro-box button {
+        border: none;
+    padding: 10px;
+    background: #8BC34A;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+}
+.pro {
+    background: transparent;
+    padding: 0;
+}
+.pro-box img {
+    width: 100%;
+    height: 270px;
+}
+.pro-box h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-section a button {
+       border: none;
+    padding: 8px;
+    border-radius: 1px;
+    color: #fff;
+    background: #E91E63;
+    font-size: 18px;
+    margin: 5px;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+}
+.trans {
+    background: transparent !important;  
+}
