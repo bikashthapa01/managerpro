@@ -35,17 +35,24 @@ def update_project(request,pid):
 	return render(request,'project/update.html',{'form':form})
 
 def project_view(request,pid):
+
+	# project_data = Project.objects.raw('select * from project_project where id=%s',[pid])
+
 	project_data = Project.objects.get(id=pid)
 	sdata = Student.objects.get(id=project_data.user_id)
 	tdata = Teacher.objects.get(id=project_data.teacher_id)
 	return render(request,'project/page.html',{'pdata':project_data, 'sdata':sdata,'tdata':tdata})
 
 def synopsis(request,pid):
+	# project_data = Project.objects.raw('select * from project_project where id=%s',[pid])
 	project_data = Project.objects.get(id=pid)
 	sdata = Student.objects.get(id=project_data.user_id)
 	tdata = Teacher.objects.get(id=project_data.teacher_id)
 	return render(request,'project/synopsis.html',{'pdata':project_data, 'sdata':sdata,'tdata':tdata})
 
 def delete_project(request,pid):
+
+	# Project.objects.raw('delete from project_project where id=%s',[pid])
+	
 	Project.objects.filter(id=pid).delete()
 	return redirect('profile-home')
