@@ -16,8 +16,14 @@ class Project(models.Model):
 	def __str__(self):
 		return self.name
 
-
-
-
-
+class Synopsis(models.Model):
+	pid 			= models.ForeignKey(Project,on_delete= models.CASCADE)
+	name 			= models.CharField(max_length=255)
+	introduction 	= models.TextField()
+	objectives	 	= models.TextField()
+	db_schema		= models.TextField()
+	frontEnd 		= models.TextField()
+	backEnd 		= models.TextField()
+	requirements 	= models.TextField()
+	image_url 		= models.CharField(max_length=1000)
 

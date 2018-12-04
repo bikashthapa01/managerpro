@@ -56,6 +56,9 @@ def signup(request):
 			isStudent = request.POST['is_student']
 			try:
 				new_user = User.objects.create_user(username=name,email=email,password=userpass,is_student=isStudent)
+				 
+				# insert into user(username,email,password,is_student) values(name,email,userpass,isStudent); 
+
 			except IntegrityError as e:
 				return render(request,'accounts/signup.html',{'err':"Sorry, Student With "+name+" Already Exists."})
 

@@ -39,6 +39,9 @@ class Student(models.Model):
 		return self.fname + " " + self.lname
 
 
+
+# create table Teacher(user references user(user_id) on delete cascade, fullName varchar(255) ....);
+
 class Teacher(models.Model):
 	dept 	= (("CSE","Computer Science"),("ISE","Information Science"))
 	gen 	= (("M","Male"),("F","Female"))

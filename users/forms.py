@@ -19,6 +19,18 @@ class StudentForm(forms.ModelForm):
 		]
 
 
+
+		widgets = {
+            'fname': forms.TextInput(attrs={'placeholder':'First Name'}),
+            'image_url': forms.TextInput(attrs={'placeholder':'Profile Image'}),
+            'usn': forms.Textarea(attrs={'placeholder':'Enter USN'}),
+            'college': forms.Textarea(attrs={'placeholder':'College Name'}),
+            'bio': forms.Textarea(attrs={'placeholder':'Enter About You'}),
+
+        }
+
+
+
 class TeacherForm(forms.ModelForm):
 	class Meta:
 		model = Teacher
